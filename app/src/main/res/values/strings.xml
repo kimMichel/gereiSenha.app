@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GereiSenha</string>
+    <string name="title">Gerei Senha</string>
+    <string name="button4digit">4 digitos</string>
+    <string name="button6digit">6 digitos</string>
+    <string name="button8digit">8 digitos</string>
+</resources>
