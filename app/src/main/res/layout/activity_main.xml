@@ -24,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="90dp"
-        android:textSize="40sp"
         android:textAlignment="center"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_title"
@@ -33,32 +33,50 @@
 
     <Button
         android:id="@+id/btn4digit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         android:text="@string/button4digit"
-        app:layout_constraintEnd_toStartOf="@+id/btn6digit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_result" />
 
     <Button
         android:id="@+id/btn6digit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
         android:text="@string/button6digit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_result" />
+        app:layout_constraintTop_toBottomOf="@+id/btn4digit"
+        tools:layout_editor_absoluteX="125dp" />
 
     <Button
         android:id="@+id/btn8digit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
         android:text="@string/button8digit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn6digit"
-        app:layout_constraintTop_toBottomOf="@+id/txt_result" />
+        app:layout_constraintTop_toBottomOf="@+id/btn6digit"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="125dp" />
+
+    <Button
+        android:id="@+id/btnAlpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/button_alphanumeric"
+        app:layout_constraintTop_toBottomOf="@+id/btn8digit"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="125dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
