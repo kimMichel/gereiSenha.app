@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import org.w3c.dom.Text
 import java.util.*
+import kotlin.math.E
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val btn4Digit: Button = findViewById(R.id.btn4digit)
         val btn6Digit: Button = findViewById(R.id.btn6digit)
         val btn8Digit: Button = findViewById(R.id.btn8digit)
+        val btnAlphaNum: Button = findViewById(R.id.btnAlpha)
 
         btn4Digit.setOnClickListener {
 
@@ -35,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
             val digit = 8
             passwordGenerator(digit, txtResult)
+        }
+        btnAlphaNum.setOnClickListener {
+            val digit = 6
+            txtResult.text = getRandomString(digit)
+
         }
     }
 
@@ -55,4 +62,11 @@ class MainActivity : AppCompatActivity() {
         txtResult.text = numbers.joinToString(" ")
 
     }
+    private fun getRandomString(length: Int) : String {
+        val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
+        return (1..length)
+            .map { allowedChars.random() }
+            .joinToString(" ")
+    }
+
 }
