@@ -4,4 +4,5 @@
     <string name="button4digit">4 digitos</string>
     <string name="button6digit">6 digitos</string>
     <string name="button8digit">8 digitos</string>
+    <string name="button_alphanumeric">Letras e Números</string>
 </resources>
