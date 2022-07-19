@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
         btnAlphaNum.setOnClickListener {
             val digit = 6
-            txtResult.text = getRandomString(digit)
+            txtResult.text = randomPassGenerator(digit)
 
         }
     }
@@ -62,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         txtResult.text = numbers.joinToString(" ")
 
     }
-    private fun getRandomString(length: Int) : String {
+    private fun randomPassGenerator(length: Int) : String {
         val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
         return (1..length)
             .map { allowedChars.random() }
